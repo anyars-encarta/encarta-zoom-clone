@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import MobileNav from './MobileNav'
+import { SignedIn, UserButton } from "@clerk/nextjs";
 
 const Navbar = () => {
   return (
@@ -10,7 +11,7 @@ const Navbar = () => {
         <Image
           src='/icons/logo.svg'
           alt='EncarToom logo'
-          width={32} 
+          width={32}
           height={32}
           className='max-sm:size-10'
         />
@@ -18,7 +19,10 @@ const Navbar = () => {
       </Link>
 
       <div className='flex-between gap-5'>
-        {/* Clerk - User Management */}
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
+        
         <MobileNav />
       </div>
     </nav>
