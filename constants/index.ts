@@ -25,3 +25,18 @@ export const sidebarLinks = [
         imgUrl: '/icons/add-personal.svg'
     },
 ]
+
+export const homeCardList = [
+    {
+        bgColor: 'bg-orange-1',
+        imgUrl: 'icons/add-meeting.svg',
+        title: 'New Meeting',
+        desc: 'Start an instant meeting'
+    },
+    {
+        bgColor: 'bg-blue-1',
+        imgUrl: 'icons/add-personal.svg',
+        title: 'Personal Meeting',
+        desc: 'Start a personal meeting'
+    }
+]
