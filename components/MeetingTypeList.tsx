@@ -10,7 +10,7 @@ const MeetingTypeList = () => {
     const [meetingState, setMeetingState] = useState<'isScheduleMeeting' | 'isJoiningMeeting' | 'isInstantMeeting' | undefined>();
 
     const createMeeting = () => {
-
+        
     }
 
     return (
