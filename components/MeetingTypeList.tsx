@@ -8,6 +8,7 @@ import { useUser } from '@clerk/nextjs';
 import { Call, useStreamVideoClient } from '@stream-io/video-react-sdk';
 import { useToast } from "@/components/ui/use-toast";
 import { Textarea } from "@/components/ui/textarea";
+import ReactDatePicker from 'react-datepicker';
 
 const MeetingTypeList = () => {
     const router = useRouter();
@@ -117,8 +118,11 @@ const MeetingTypeList = () => {
                             }}
                         />
                     </div>
-                    <div>
-                        
+                    <div className='flex w-full flex-col pap-2.5'>
+                    <label htmlFor="date" className='text-base text-normal leading-[22px] text-sky-2'>
+                            Select Date and Time
+                        </label>
+                        <ReactDatePicker />
                     </div>
                 </MeetingModal>
             ) : (
