@@ -119,10 +119,20 @@ const MeetingTypeList = () => {
                         />
                     </div>
                     <div className='flex w-full flex-col pap-2.5'>
-                    <label htmlFor="date" className='text-base text-normal leading-[22px] text-sky-2'>
+                        <label htmlFor="date" className='text-base text-normal leading-[22px] text-sky-2'>
                             Select Date and Time
                         </label>
-                        <ReactDatePicker />
+                        <ReactDatePicker
+                            id='date'
+                            selected={values.dateTime}
+                            onChange={(date) => setValues({ ...values, dateTime: date! })}
+                            showTimeSelect
+                            timeFormat='HH:mm'
+                            timeIntervals={15}
+                            timeCaption='time'
+                            dateFormat='MMMM d, yyyy h:mm aa'
+                            className='w-full rounded bg-dark-3 p-2 focus:outile-none'
+                        />
                     </div>
                 </MeetingModal>
             ) : (
