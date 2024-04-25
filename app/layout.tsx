@@ -9,7 +9,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "EncaToom",
+  title: "EncarToom",
   description: "Video Meeting App",
   icons: {
     icon: '/icons/logo.svg'
