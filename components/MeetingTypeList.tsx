@@ -7,6 +7,7 @@ import MeetingModal from './MeetingModal';
 import { useUser } from '@clerk/nextjs';
 import { Call, useStreamVideoClient } from '@stream-io/video-react-sdk';
 import { useToast } from "@/components/ui/use-toast";
+import { Textarea } from "@/components/ui/textarea";
 
 const MeetingTypeList = () => {
     const router = useRouter();
@@ -28,7 +29,7 @@ const MeetingTypeList = () => {
         if (!client || !user) return;
 
         try {
-            if(!values.dateTime) {
+            if (!values.dateTime) {
                 toast({ title: "Please select a date and a time", })
                 return;
             }
@@ -99,6 +100,42 @@ const MeetingTypeList = () => {
                 handleClick={() => setMeetingState('isJoiningMeeting')}
             />
 
+            {!callDetails ? (
+                <MeetingModal
+                    isOpen={meetingState === 'isScheduleMeeting'}
+                    onClose={() => setMeetingState(undefined)}
+                    title='Create Meeting'
+                    handleClick={createMeeting}
+                >
+                    <div className='flex flex-col gap-2.5'>
+                        <label htmlFor="desc" className='text-base text-normal leading-[22px] text-sky-2'>
+                            Add a description
+                        </label>
+                        <Textarea id='desc' className='border-none bg-dark-3 focus-visible:ring-0 focus-visible:ring-offset-0'
+                            onChange={(e) => {
+                                setValues({ ...values, description: e.target.value })
+                            }}
+                        />
+                    </div>
+                    <div>
+                        
+                    </div>
+                </MeetingModal>
+            ) : (
+                <MeetingModal
+                    isOpen={meetingState === 'isScheduleMeeting'}
+                    onClose={() => setMeetingState(undefined)}
+                    title='Meeting Created'
+                    className='text-center'
+                    handleClick={() => {
+                        // navigator.clipboard.writeText(meetingLink);
+                        // toast({ title: 'Link Copied' })
+                    }}
+                    image='/icons/checked.svg'
+                    buttonIcon='/icons/copy.svg'
+                    buttonText='Copy Meeting Link'
+                />
+            )}
             <MeetingModal
                 isOpen={meetingState === 'isInstantMeeting'}
                 onClose={() => setMeetingState(undefined)}
