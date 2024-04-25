@@ -84,7 +84,7 @@
 
 LIVE DEMO
 
-> Visit the [live](https://real-estate-anyars.vercel.app/) version of the project here.
+> Visit the [live](https://encarta-zoom-clone.vercel.app/) version of the project here.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
