@@ -11,8 +11,8 @@ const SignInPage = () => {
 
 export default SignInPage;
 
-// Function to generate static params for dynamic routes
-export async function generateStaticParams() {
-  // Return an empty array if you don't have specific dynamic paths to pre-render
-  return []
-}
+// // Function to generate static params for dynamic routes
+// export async function generateStaticParams() {
+//   // Return an empty array if you don't have specific dynamic paths to pre-render
+//   return []
+// }
