@@ -31,3 +31,9 @@ const Meeting = ({ params: { id } }: { params: { id: string } }) => {
 }
 
 export default Meeting
+
+// Function to generate static params for dynamic routes
+export async function generateStaticParams() {
+  // Return an empty array if you don't have specific dynamic paths to pre-render
+  return []
+}
