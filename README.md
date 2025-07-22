@@ -41,6 +41,8 @@
 
 > EncarToom is a Zoom Clone app for Video Meetings. Users could create Instant Meetings, schedule meetings, record meetings as well as view previous meetings.
 
+Users could create Instant Meetings, schedule meetings, record meetings as well as view previous meetings.
+
 ## 🛠 Built With <a name="built-with"></a>
 1. React
 2. Clerk
